@@ -1,0 +1,135 @@
+%font-settings {
+	font-weight: 500;
+	font-size: 14px;
+	font-style: normal;
+	line-height: 1.14em;
+	letter-spacing: 0.02em;
+}
+
+%change-color-and-fill {
+	color: $color-for-hovered;
+	fill: $color-for-hovered;
+}
+
+header {
+	.logo {
+		margin-right: 85px;
+	}
+} //header
+
+.head {
+	position: fixed;
+	top: 0px;
+
+	width: 100%;
+
+	background-color: #ffffff;
+	z-index: 100;
+
+	.container {
+		display: flex;
+		align-items: center;
+	} //.head .container
+
+	nav {
+		display: flex;
+		align-items: center;
+	} //.head nav
+} //.head
+
+.menu-nav {
+	@extend %font-settings;
+
+	display: flex;
+
+	a {
+		display: block;
+		padding-top: 32px;
+		padding-bottom: 32px;
+
+		transition: color $trans-time-and-bezier;
+	} //.menu-nav a
+
+	li:not(:last-child) {
+		margin-right: 50px;
+	} //.menu-nav li:not(:last-child)
+
+	.current::after {
+		content: '';
+		position: absolute;
+		display: inline-block;
+		bottom: 0px;
+		left: 0px;
+
+		width: 100%;
+		height: 4px;
+		background-color: $color-for-hovered;
+		border-radius: 4px;
+	} //.menu-nav .current::after
+
+	&-item {
+		position: relative;
+
+		a:hover,
+		a:focus {
+			@extend %change-color-and-fill;
+		}
+
+		a:hover::after,
+		a:focus::after {
+			transform: scaleX(1);
+		} //.menu-nav-item a:hover::after
+	} //.menu-nav-item
+
+	&-item-link::after {
+		content: '';
+		position: absolute;
+		display: inline-block;
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+		height: 4px;
+		background-color: $color-for-hovered;
+		border-radius: 4px;
+		transform: scaleX(0);
+		transition: transform $trans-time-and-bezier;
+	} //.menu-nav-item-link::after
+} //.menu-nav
+
+.current {
+	@extend %change-color-and-fill;
+}
+
+.mail-and-tel {
+	@extend %font-settings;
+
+	display: inline-flex;
+
+	margin-left: auto;
+	color: $color-for-description;
+	fill: $color-for-description;
+
+	&-logo {
+		margin-right: 10px;
+	}
+
+	a {
+		display: inline-flex;
+		align-items: center;
+
+		transition: fill $trans-time-and-bezier, color $trans-time-and-bezier;
+
+		&:not(:last-child) {
+			margin-right: 30px;
+		} //.mail-and-tel a:not(:last-child)
+
+		&:hover,
+		:focus {
+			@extend %change-color-and-fill;
+		} //.mail-and-tel a:hover
+	} //.mail-and-tel a
+} //.mail-and-tel
+
+.email-logo {
+	display: inline-block;
+}

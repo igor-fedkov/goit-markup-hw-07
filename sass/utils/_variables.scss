@@ -1,0 +1,26 @@
+/* Цвет кнопок, hover и focus элементов*/
+$color-for-hovered: #2196f3;
+
+/* Цвет текста кнопок и текста на затемненных элементах */
+$color-for-btn-caption: #ffffff;
+
+/* Цвет описания emai и tel в header, преимуществ и членов команды*/
+$color-for-description: #757575;
+
+/* Цвет иконок соц. сетей и клиентов */
+$color-for-icons: #afb1b8;
+
+/* Радиус скругления для изображений */
+$radius-borders: 4px;
+
+/* Ширина контейнеров с учетом отступов  */
+$width-of-container: 1200px;
+
+/*Переход, время и функция перехода*/
+$trans-time-and-bezier: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+/*Основной шрифт*/
+$main-font: 'Roboto', sans-serif;
+
+/*Шрифт логотипа*/
+$logo-font: 'Raleway', sans-serif;

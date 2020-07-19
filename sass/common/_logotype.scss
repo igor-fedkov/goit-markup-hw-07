@@ -1,0 +1,12 @@
+.logo {
+	font-family: $logo-font;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 26px;
+	line-height: 1.19em;
+	letter-spacing: 0.03em;
+
+	&-text-web {
+		color: #2196f3;
+	}
+} //.logo
